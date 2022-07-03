@@ -2,8 +2,10 @@
 
 - Default
   - BookMgrMain.java
+- Package : DB
+  - BookDTO
+  - BookDAO
+  - DBConnection
 - Package : module
-  - BookDataSet.java
-  - BookInfo.java
   - BookMethod.java
   - BookMgrStarter.java
