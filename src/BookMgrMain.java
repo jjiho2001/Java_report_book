@@ -9,7 +9,6 @@ public class BookMgrMain {
 
 	public static void main(String[] args) {
 		new BookMgrStarter();
-
 	}
 
 }

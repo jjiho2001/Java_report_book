@@ -7,11 +7,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.TreeMap;
 
-public class BookDataSet {
+public class xBookDataSet {
 
-	public static TreeMap<Integer, BookInfo> bookList = new TreeMap<Integer, BookInfo>();
+	public static TreeMap<Integer, xBookInfo> bookList = new TreeMap<Integer, xBookInfo>();
 	
-	public BookDataSet() {
+	public xBookDataSet() {
 		
 	}
 
@@ -21,7 +21,7 @@ public class BookDataSet {
 			FileOutputStream fos = new FileOutputStream(f);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			
-			oos.writeObject(BookDataSet.bookList);
+			oos.writeObject(xBookDataSet.bookList);
 			
 			oos.close();
 			fos.close();
@@ -37,7 +37,7 @@ public class BookDataSet {
 				FileInputStream ios = new FileInputStream(f);
 				ObjectInputStream ois = new ObjectInputStream(ios);
 				
-				BookDataSet.bookList = (TreeMap) ois.readObject();
+				xBookDataSet.bookList = (TreeMap) ois.readObject();
 				
 				ois.close();
 				ios.close();

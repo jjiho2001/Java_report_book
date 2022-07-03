@@ -9,8 +9,6 @@ public class BookMgrStarter {
 	
 	public BookMgrStarter() {
 		
-		BookDataSet.dataLoad();
-		
 		do {
 			try {
 				System.out.print(menu());
@@ -18,15 +16,15 @@ public class BookMgrStarter {
 				
 				switch(bookMenu){
 					case 1 : bm.bookList(); break;
-					case 2 : bm.bookInsert(); break;
+					case 2 : bm.bookAdd(); break;
 					case 3 : bm.bookEdit(); break;
-					case 4 : bm.bookDelete(); break;
+					case 4 : bm.bookDel(); break;
 					case 5 : bm.bookSearch(); break;
 					case 6 : bm.exit_bookMgr(); break;
 					default : throw new NumberFormatException();
 				}
 			} catch (NumberFormatException nfe) {
-				System.out.println("Menu내 숫자를 입력하세요");
+				System.out.println("Menu에서 고르십쇼!");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
